@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moneda</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/icons/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../css/moneda.css" />
+    <script src="../js/funciones.js"></script>
+    <script src="../js/moneda.js"></script>
+  </head>
+  <body>
+    <main class="container p-5">
+      <div class="d-flex justify-content-center align-items-center">
+        <p class="my-0 mx-2 fs-2 text-center font-monospace">Moneda:</p>
+        <button class="mx-2 btn btn-primary btn-sm" onclick="descripcion()">
+          Mostrar descripción
+        </button>
+        <dialog id="modal" class="col-6 rounded">
+          <div class="mb-3 d-flex justify-content-end">
+            <button class="btn btn-secondary btn-sm" onclick="cerrar()">
+              <b><i class="bi bi-x-lg"></i></b>
+            </button>
+          </div>
+          <p class="fs-5 font-monospace text-center">
+            <b>Moneda:</b> Simular el lanzamiento de una moneda al aire
+            generando un número aleatorio que varíe entre 0 y 1. Para dar más
+            sensación de realidad hacer que la imagen de la moneda cambie 6
+            veces antes de presentar la imagen de la parte de la moneda
+            escogida.
+          </p>
+        </dialog>
+      </div>
+      <div class="mt-4 d-flex justify-content-center">
+        <div id="coin" class="col-4">
+          <img
+            id="moneda"
+            alt="moneda"
+            src="../images/euro.svg"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="mt-4 d-flex justify-content-center">
+        <p id="cont-cara" class="fs-5 font-monospace mx-2 p-2 bg-light rounded">
+          Cara: 0
+        </p>
+        <p id="cont-cruz" class="fs-5 font-monospace mx-2 p-2 bg-light rounded">
+          Cruz: 0
+        </p>
+      </div>
+      <div class="mt-4 d-flex justify-content-center">
+        <button
+          id="btn_lanzar"
+          class="mx-2 col-4 btn btn-primary"
+          onclick="lanzar()"
+        >
+          Lanzar
+        </button>
+        <button class="mx-2 col-4 btn btn-primary" onclick="reiniciar()">
+          Resetear
+        </button>
+        <a class="mx-2 btn btn-secondary" href="../index.html">Volver</a>
+      </div>
+    </main>
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>

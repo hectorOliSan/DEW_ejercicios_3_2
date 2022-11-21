@@ -1,0 +1,65 @@
+@keyframes slide {
+  0% {
+    translate: 0;
+  }
+  5% {
+    translate: -100%;
+  }
+  10% {
+    translate: -200%;
+  }
+  15% {
+    translate: -100%;
+  }
+  20% {
+    translate: 0;
+  }
+  25% {
+    translate: -100%;
+  }
+  30% {
+    translate: -200%;
+  }
+  35% {
+    translate: -100%;
+  }
+  40% {
+    translate: 0;
+  }
+  45% {
+    translate: -100%;
+  }
+  50% {
+    translate: -200%;
+  }
+  55% {
+    translate: -100%;
+  }
+  60% {
+    translate: 0;
+  }
+  65% {
+    translate: -100%;
+  }
+  70% {
+    translate: -200%;
+  }
+  75% {
+    translate: -100%;
+  }
+  80% {
+    translate: 0;
+  }
+  85% {
+    translate: -100%;
+  }
+  90% {
+    translate: -200%;
+  }
+  95% {
+    translate: -100%;
+  }
+  100% {
+    translate: 0;
+  }
+}

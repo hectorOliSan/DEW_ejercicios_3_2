@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factorial</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/icons/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../css/moneda.css" />
+    <link rel="stylesheet" href="../css/ppt.css" />
+    <script src="../js/funciones.js"></script>
+    <script src="../js/factorial.js"></script>
+  </head>
+  <body>
+    <main class="container p-5">
+      <div class="d-flex justify-content-center align-items-center">
+        <p class="my-0 mx-2 fs-2 text-center font-monospace">Factorial:</p>
+        <button class="mx-2 btn btn-primary btn-sm" onclick="descripcion()">
+          Mostrar descripción
+        </button>
+        <dialog id="modal" class="col-6 rounded">
+          <div class="mb-3 d-flex justify-content-end">
+            <button class="btn btn-secondary btn-sm" onclick="cerrar()">
+              <b><i class="bi bi-x-lg"></i></b>
+            </button>
+          </div>
+          <p class="fs-5 font-monospace text-center">
+            <b>Factorial:</b> Calcular a través de la función
+            denominada <b>Factorial()</b> el factorial de un número que se introduce
+            por teclado. Se controlará que los caracteres introducidos sean
+            numéricos y que correspondan a un entero que no es negativo.
+          </p>
+        </dialog>
+      </div>
+      <p class="fs-5 m-2 font-monospace text-center">
+        Introduce 0 o un número positivo
+      </p>
+      <div class="col-6 m-4 mx-auto">
+        <div class="input-group mb-3">
+          <span class="input-group-text"><i class="px-4 bi bi-123"></i></span>
+          <input
+            id="num_fac"
+            type="number"
+            class="form-control"
+            placeholder="Escribe un número..."
+            min="0"
+          />
+        </div>
+      </div>
+      <div class="col-6 m-4 mx-auto">
+        <div class="input-group mb-3">
+          <span class="input-group-text px-1"><b>Resultado:</b></span>
+          <input id="res_fac" type="number" class="form-control" disabled />
+        </div>
+      </div>
+      <div class="mt-4 d-flex justify-content-center">
+        <button
+          id="factorial"
+          class="mx-2 col-4 btn btn-primary"
+          onclick="accion_fac(factorial)"
+        >
+          Calcular Factorial
+        </button>
+        <button class="mx-2 col-4 btn btn-primary" onclick="reiniciar()">
+          Resetear
+        </button>
+        <a class="mx-2 btn btn-secondary" href="../index.html">Volver</a>
+      </div>
+      <div class="mt-4 d-flex justify-content-center">
+        <p id="fac_ayuda" class="fs-5 font-monospace text-muted"></p>
+      </div>
+    </main>
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>

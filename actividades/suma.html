@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Número de argumentos</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/icons/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../css/moneda.css" />
+    <link rel="stylesheet" href="../css/ppt.css" />
+    <script src="../js/funciones.js"></script>
+    <script src="../js/isi.js"></script>
+  </head>
+  <body>
+    <main class="container p-5">
+      <div class="d-flex justify-content-center align-items-center">
+        <p class="my-0 mx-2 fs-2 text-center font-monospace">
+          Número de argumentos variables:
+        </p>
+        <button
+          class="mx-2 col-sm-6 col-md-4 col-lg-2 btn btn-primary btn-sm"
+          onclick="descripcion()"
+        >
+          Mostrar descripción
+        </button>
+        <dialog id="modal" class="col-6 rounded">
+          <div class="mb-3 d-flex justify-content-end">
+            <button class="btn btn-secondary btn-sm" onclick="cerrar()">
+              <b><i class="bi bi-x-lg"></i></b>
+            </button>
+          </div>
+          <p class="fs-5 font-monospace text-center">
+            <b>Número de argumentos variables:</b> Diseñar la función
+            <b>Suma(número de argumentos variables, separados por coma)</b> que
+            realice la suma de los números sean estos enteros o reales. Indicará
+            si la entrada no tiene el formato solicitado.
+          </p>
+        </dialog>
+      </div>
+      <p class="fs-5 m-2 font-monospace text-center">
+        Introduzca los números que desea sumar separados por comas, por ejemplo:
+        3,45,25
+      </p>
+      <div class="col-8 m-4 mx-auto">
+        <div class="input-group mb-3">
+          <span class="input-group-text"><b>Números:</b></span>
+          <input
+            id="list_numeros"
+            type="text"
+            class="form-control"
+            placeholder="Escribe un lista de números..."
+          />
+        </div>
+      </div>
+      <div class="col-8 m-4 mx-auto">
+        <div class="input-group mb-3">
+          <span class="input-group-text px-4"><b>Suma:</b></span>
+          <input id="res_suma" type="number" class="form-control" disabled />
+        </div>
+      </div>
+      <div class="mt-4 d-flex justify-content-center">
+        <button class="mx-2 col-4 btn btn-primary" onclick="accion_suma()">
+          Realizar la suma
+        </button>
+        <button class="mx-2 col-4 btn btn-primary" onclick="reiniciar()">
+          Resetear
+        </button>
+        <a class="mx-2 btn btn-secondary" href="../index.html">Volver</a>
+      </div>
+      <div class="mt-4 d-flex justify-content-center">
+        <p id="suma_ayuda" class="fs-5 font-monospace text-muted"></p>
+      </div>
+    </main>
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>

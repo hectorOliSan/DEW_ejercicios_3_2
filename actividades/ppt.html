@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piedra, papel y tijera</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/icons/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../css/moneda.css" />
+    <link rel="stylesheet" href="../css/ppt.css" />
+    <script src="../js/funciones.js"></script>
+    <script src="../js/ppt.js"></script>
+  </head>
+  <body>
+    <main class="container p-5">
+      <div class="d-flex justify-content-center align-items-center">
+        <p class="my-0 mx-2 fs-2 text-center font-monospace">
+          Piedra, papel y tijera:
+        </p>
+        <button class="mx-2 btn btn-primary btn-sm" onclick="descripcion()">
+          Mostrar descripción
+        </button>
+        <dialog id="modal" class="col-6 rounded">
+          <div class="mb-3 d-flex justify-content-end">
+            <button class="btn btn-secondary btn-sm" onclick="cerrar()">
+              <b><i class="bi bi-x-lg"></i></b>
+            </button>
+          </div>
+          <p class="fs-5 font-monospace text-center">
+            <b>Piedra, papel y tijera:</b> El usuario elegirá su opción en un
+            <b>grupo de radio botones (<code>input type="radio"</code>)</b> y la
+            máquina generando un número aleatorio entre 0 y 2. Para dar más
+            sensación de realidad hacer que la imagen correspondiente a la
+            opción elegida por la máquina cambie 20 veces antes de presentar
+            opción seleccionada.
+            <br />
+            El programa indicará si gana el usuario, la máquina o si existe un
+            empate.
+          </p>
+        </dialog>
+      </div>
+      <div class="mt-4 d-flex justify-content-center">
+        <p class="fs-5 font-monospace mx-3 p-2 bg-light rounded">
+          Usuario: <b id="cont-user" class="text-success">0</b>
+        </p>
+        <p class="fs-5 font-monospace mx-3 p-2 bg-light rounded">
+          Máquina: <b id="cont-maq" class="text-danger">0</b>
+        </p>
+        <p class="fs-5 font-monospace mx-3 p-2 bg-light rounded">
+          Empates: <b id="cont-empate">0</b>
+        </p>
+      </div>
+      <div class="p-2 col-3 d-block mx-auto overflow-hidden rounded-circle">
+        <div id="mov_maquina" class="d-flex">
+          <img
+            id="maq_0"
+            alt="maquina"
+            src="../images/piedra.svg"
+            class="img-fluid border border-5 rounded-circle mx-2"
+          />
+          <img
+            id="maq_1"
+            alt="maquina"
+            src="../images/papel.svg"
+            class="img-fluid border border-5 rounded-circle mx-2"
+          />
+          <img
+            id="maq_2"
+            alt="maquina"
+            src="../images/tijeras.svg"
+            class="img-fluid border border-5 rounded-circle mx-2"
+          />
+        </div>
+      </div>
+      <div
+        class="col-8 mx-auto mt-5 bg-light rounded-top p-3 d-flex justify-content-center"
+      >
+        <!--Piedra-->
+        <div class="col-2 mx-3 d-flex flex-column">
+          <label for="piedra"
+            ><img
+              id="0"
+              alt="piedra"
+              src="../images/piedra.svg"
+              class="img-fluid border border-dark border-5 rounded-circle"
+          /></label>
+          <input
+            type="radio"
+            id="piedra"
+            class="d-none"
+            name="ppt"
+            value="0"
+            onclick="selec()"
+          />
+        </div>
+        <!--Papel-->
+        <div class="col-2 mx-3 d-flex flex-column">
+          <label for="papel"
+            ><img
+              id="1"
+              alt="papel"
+              src="../images/papel.svg"
+              class="img-fluid border border-dark border-5 rounded-circle"
+          /></label>
+          <input
+            type="radio"
+            id="papel"
+            class="d-none"
+            name="ppt"
+            value="1"
+            onclick="selec()"
+          />
+        </div>
+        <!--Tijera-->
+        <div class="col-2 mx-3 d-flex flex-column">
+          <label for="tijera"
+            ><img
+              alt="tijera"
+              id="2"
+              src="../images/tijeras.svg"
+              class="img-fluid border border-dark border-5 rounded-circle"
+          /></label>
+          <input
+            type="radio"
+            id="tijera"
+            class="d-none"
+            name="ppt"
+            value="2"
+            onclick="selec()"
+          />
+        </div>
+      </div>
+      <p
+        class="col-8 mx-auto fs-5 p-2 font-monospace text-center bg-light rounded-bottom"
+      >
+        Elige tu movimiento
+      </p>
+      <div class="mt-4 d-flex justify-content-center">
+        <button
+          id="btn_lanzar"
+          class="mx-2 col-4 btn btn-primary"
+          onclick="ppt()"
+        >
+          Jugar
+        </button>
+        <button class="mx-2 col-4 btn btn-primary" onclick="reiniciar()">
+          Resetear
+        </button>
+        <a class="mx-2 btn btn-secondary" href="../index.html">Volver</a>
+      </div>
+      <div class="mt-4 d-flex justify-content-center">
+        <p id="p_res" class="fs-5 font-monospace"></p>
+        <span id="resultado" class="fs-5 font-monospace"></span>
+      </div>
+    </main>
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>
